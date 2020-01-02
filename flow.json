@@ -1,0 +1,4799 @@
+[
+    {
+        "id": "fe33eec9.704e7",
+        "type": "tab",
+        "label": "Instagram bot",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e5567625.f366e8",
+        "type": "inject",
+        "z": "fe33eec9.704e7",
+        "name": "",
+        "topic": "",
+        "payload": "https://www.instagram.com/accounts/login/?source=auth_switcher",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 170,
+        "y": 740,
+        "wires": [
+            [
+                "b61f3ee.d5368c"
+            ]
+        ]
+    },
+    {
+        "id": "75a6eeec.6fe69",
+        "type": "credentials",
+        "z": "fe33eec9.704e7",
+        "name": "",
+        "props": [
+            {
+                "value": "username",
+                "type": "msg"
+            },
+            {
+                "value": "passclass",
+                "type": "msg"
+            },
+            {
+                "value": "url",
+                "type": "msg"
+            },
+            {
+                "value": "pass",
+                "type": "msg"
+            },
+            {
+                "value": "accesso",
+                "type": "msg"
+            }
+        ],
+        "x": 590,
+        "y": 720,
+        "wires": [
+            [
+                "2b8c06b.0239bfa",
+                "a1b3335a.cfb99"
+            ]
+        ]
+    },
+    {
+        "id": "b61f3ee.d5368c",
+        "type": "function",
+        "z": "fe33eec9.704e7",
+        "name": "",
+        "func": "msg.payload = Math.round(Math.random()*10);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 740,
+        "wires": [
+            [
+                "75a6eeec.6fe69"
+            ]
+        ]
+    },
+    {
+        "id": "2b8c06b.0239bfa",
+        "type": "nbrowser",
+        "z": "fe33eec9.704e7",
+        "name": "",
+        "methods": [
+            {
+                "name": "gotoURL",
+                "func": "goto",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "accesso",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "type",
+                "func": "type",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".f0n8F ",
+                        "typeDefault": "str"
+                    },
+                    {
+                        "type": "msg",
+                        "value": "username",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": "12",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "gotoURL",
+                "func": "goto",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "url",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": "._9AhH0",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "mouse",
+                "func": "mouse",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    },
+                    {
+                        "type": "mouseAction",
+                        "value": "over",
+                        "typeDefault": "mouseAction"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".HBoOv.coreSpriteRightPaginationArrow",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "wait",
+                "func": "wait",
+                "params": [
+                    {
+                        "type": "msg",
+                        "value": "payload",
+                        "typeDefault": "str"
+                    }
+                ]
+            },
+            {
+                "name": "click",
+                "func": "click",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": ".dCJp8.afkep",
+                        "typeDefault": "str"
+                    }
+                ]
+            }
+        ],
+        "prop": "nbrowser",
+        "propout": "payload",
+        "object": "msg",
+        "objectout": "msg",
+        "close": false,
+        "show": true,
+        "ssl": false,
+        "outputs": 1,
+        "x": 860,
+        "y": 800,
+        "wires": [
+            [
+                "44fbf204.f4fe9c"
+            ]
+        ]
+    },
+    {
+        "id": "44fbf204.f4fe9c",
+        "type": "function",
+        "z": "fe33eec9.704e7",
+        "name": "",
+        "func": "var mypayload = msg.payload;\n\nmsg.payload = {\n\tchatId:\"132587021\", //your chatId\n\ttype:\"message\",\n\tcontent: \"Instagram ha finito\" \n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1050,
+        "y": 800,
+        "wires": [
+            [
+                "b41e21f5.5dd64"
+            ]
+        ]
+    },
+    {
+        "id": "b41e21f5.5dd64",
+        "type": "telegram sender",
+        "z": "fe33eec9.704e7",
+        "name": "",
+        "bot": "57d987d8.63d3c8",
+        "x": 1220,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7620859a.f9829c",
+        "type": "inject",
+        "z": "fe33eec9.704e7",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 840,
+        "y": 900,
+        "wires": [
+            [
+                "44fbf204.f4fe9c"
+            ]
+        ]
+    },
+    {
+        "id": "a1b3335a.cfb99",
+        "type": "function",
+        "z": "fe33eec9.704e7",
+        "name": "",
+        "func": "var mypayload = msg.payload;\n\nmsg.payload = {\n\tchatId:\"132587021\", //your chatId\n\ttype:\"message\",\n\tcontent: \"Instagram ha iniziato\" \n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 610,
+        "y": 840,
+        "wires": [
+            [
+                "b41e21f5.5dd64"
+            ]
+        ]
+    },
+    {
+        "id": "57d987d8.63d3c8",
+        "type": "telegram bot",
+        "z": "",
+        "botname": "serverh2h_bot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "updatemode": "polling",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksport": "6667",
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "localbotport": "8443",
+        "publicbotport": "8443",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "verboselogging": false
+    }
+]
